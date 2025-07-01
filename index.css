@@ -1,0 +1,303 @@
+/* === Global Reset & Body === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top left, #1a1a1a, #0d0d0d);
+  color: #f1f1f1;
+}
+
+/* === Layout === */
+.admin-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #2d2d2d, #1a1a1a);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.6);
+  border-right: 1px solid #444;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* === Sidebar Buttons === */
+.nav-button {
+  background: linear-gradient(135deg, #4e4e4e, #2a2a2a);
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-button:hover {
+  background: linear-gradient(135deg, #34ace0, #2e86de);
+  color: #fff;
+  transform: translateX(6px);
+  box-shadow: 0 0 12px rgba(52, 172, 224, 0.4);
+}
+
+/* === Main Content === */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background: linear-gradient(145deg, #1b1b1b, #0d0d0d);
+  overflow-y: auto;
+}
+/* === Auth Page (Login / Signup) Centered & Polished === */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  padding: 20px;
+  overflow: hidden;
+}
+
+.auth-form {
+  background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
+  padding: 3rem;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.auth-form:hover {
+  transform: scale(1.02);
+}
+
+.auth-form h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Inputs & Select */
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  background-color: #2e2e2e;
+  color: #f5f5f5;
+  border: 1px solid #444;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.auth-form input::placeholder {
+  color: #aaa;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  border-color: #00a8ff;
+  box-shadow: 0 0 0 2px rgba(0, 168, 255, 0.4);
+  outline: none;
+}
+
+/* Button */
+.auth-form button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00a8ff, #0097e6);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.auth-form button:hover {
+  background: linear-gradient(135deg, #0097e6, #007acc);
+  transform: translateY(-1px);
+}
+
+/* Link text under button (e.g. "Already have an account?") */
+.auth-form .bottom-text {
+  margin-top: 20px;
+  text-align: center;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.auth-form .bottom-text a {
+  color: #00a8ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-form .bottom-text a:hover {
+  text-decoration: underline;
+}
+
+/* === Role Dropdown === */
+.role-select {
+  margin: 10px 0;
+  color: #ddd;
+}
+
+.role-select label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* === Table (Users Page) === */
+.user-table-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+  background: #222;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.user-table-wrapper h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  color: #eee;
+}
+
+.user-table th {
+  background-color: #333;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.user-table tr:hover {
+  background-color: #2a2a2a;
+}
+
+.user-table a {
+  color: #00a8ff;
+  text-decoration: none;
+}
+
+.user-table a:hover {
+  text-decoration: underline;
+}
+
+/* === Todo Page === */
+.todo-page {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  background: #1c1c1c;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.todo-page h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.todo-page form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.todo-page input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  background: #2d2d2d;
+  border: 1px solid #444;
+  color: #f1f1f1;
+  font-size: 15px;
+}
+
+.todo-page button {
+  padding: 12px 16px;
+  background: #00a8ff;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.todo-page button:hover {
+  background: #0097e6;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  background: #292929;
+  border: 1px solid #3c3c3c;
+  border-radius: 10px;
+  padding: 14px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.todo-item button {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.todo-item button:hover {
+  color: #fff;
+}
